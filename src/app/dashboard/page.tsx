@@ -1,3 +1,5 @@
+// Dashboard page 是 client component，build 出來的 dashboard.rsc 中看不到有 h1 tag 的結構，但可以找到額外的 js 檔案，並在該 js 檔案中找到 h1 tag 的結構
+
 'use client';
 
 import { useState } from 'react';
