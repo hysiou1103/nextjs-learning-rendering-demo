@@ -1,13 +1,16 @@
 'use client';
-// 因為引入 server-only 的程式碼，所以會於編譯時產生錯誤
-import { serverSideFunction } from '@/utils/server-utils';
+// 在 clinet component 中引入 server-only 的程式碼，會於編譯時產生錯誤
+// import { serverSideFunction } from '@/utils/server-utils';
+import { useTheme } from '@/components/theme-provider';
 
 export default function ClientRoutePage() {
   console.log('Client route rendered');
-  const result = serverSideFunction();
+  const theme = useTheme();
+  // const result = serverSideFunction();
   return (
     <>
-      <h1>ClientRoutePage</h1>;<p>{result}</p>
+      <h1 style={{ color: theme.colors.secondary }}>ClientRoutePage</h1>
+      {/* <p>{result}</p> */}
     </>
   );
 }
