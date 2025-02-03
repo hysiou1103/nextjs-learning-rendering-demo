@@ -24,6 +24,7 @@ export default function Home() {
           <li>Save and see your changes instantly.</li>
         </ol>
         <Link href="/dashboard">dashboard</Link>
+        <Link href="/landing-page">Landing Page</Link>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
